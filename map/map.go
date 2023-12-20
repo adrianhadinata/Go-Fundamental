@@ -38,4 +38,23 @@ func main() {
 	for key, value := range names {
 		fmt.Println(key, value)
 	}
+
+	// map inside map
+	mahasiswa := map[string]map[string]string {
+		"1001" : map[string]string {
+			"name": "Adrian",
+			"address": "Indonesia",
+			"gender" :"male",
+		},
+		"1002" : map[string]string {
+			"name": "Trixie",
+			"address": "Indonesia",
+			"gender" :"female",
+		},
+	}
+
+	fmt.Println(mahasiswa)
+
+	delete(mahasiswa, "1002")
+	fmt.Println(mahasiswa)
 }
